@@ -1,39 +1,42 @@
 🩺 Diabetes Prediction System
-A streamlined Machine Learning pipeline to predict diabetes using medical data. This project demonstrates data preprocessing, feature scaling, and classification using SVM and Logistic Regression.
 
-✨ Features
-Data Scaling: Uses StandardScaler for optimized model performance.
+Predicts diabetes using medical data with SVM and Logistic Regression.
 
-Dual Models: Implements both Support Vector Machines (SVM) and Logistic Regression.
+<details> <summary>✨ Features</summary>
 
-Fast Inference: Predicts outcomes for new patients in milliseconds.
+Data Scaling with StandardScaler
 
-🛠️ Tech Stack
-Python
+Dual Models: SVM & Logistic Regression
 
-Pandas & NumPy (Data Handling)
+Fast predictions for new patients
 
-Scikit-learn (Machine Learning)
+</details> <details> <summary>🛠️ Tech Stack</summary>
 
-🚀 Quick Start
-Clone & Load: Load the diabetes.csv dataset.
+Python, Pandas, NumPy
 
-Train: Run the script to scale features and fit the SVM model.
+Scikit-learn
 
-Predict:
+</details> <details> <summary>📂 Dataset</summary>
 
-Python
-# Example input data
-data = (5, 116, 74, 0, 0, 25.6, 0.201, 30)
+768 entries, 8 features
 
-# Standardize and Predict
-scaled_data = scalr.transform(np.asarray(data).reshape(1,-1))
-result = model.predict(scaled_data)
+Target: Diabetic / Non-Diabetic
 
-print("Diabetic" if result[0] == 1 else "Non-Diabetic")
-📊 Dataset Stats
-Entries: 768
+</details> <details> <summary>🚀 Quick Start</summary>
+git clone <repo-url>
+pip install -r requirements.txt
 
-Features: 8 (Glucose, BMI, Age, etc.)
+# Train & Predict
+scaled = scaler.transform(np.asarray(data).reshape(1,-1))
+result = model.predict(scaled)
+print("Diabetic" if result[0]==1 else "Non-Diabetic")
 
-Classes: 2 (Diabetic / Non-Diabetic)
+</details> <details> <summary>💡 Future Improvements</summary>
+
+Add Random Forest / XGBoost
+
+Web interface
+
+Feature visualization
+
+</details>
